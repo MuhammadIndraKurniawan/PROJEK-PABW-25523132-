@@ -114,3 +114,48 @@ input:user-invalid {
 .form-kolom:has(input:user-invalid) .pesan-galat {
   display: block;
 }
+/* ===================================================
+   LEMBAR C: Galeri Adaptif & Isi Kartu
+   =================================================== */
+
+/* C.1 Galeri adaptif tanpa media query */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4, 1rem);
+}
+
+/* C.2 Isi kartu memakai flex dan tinggi seragam */
+.kartu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 14rem;
+  min-width: 0;
+}
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2, 0.5rem);
+}
+
+/* ===================================================
+   LEMBAR D: Penempatan Span untuk Sorotan
+   =================================================== */
+.sorotan {
+  grid-column: span 2;
+}
+
+/* ===================================================
+   LEMBAR E: Mencegah Teks Panjang Meluber
+   =================================================== */
+.kartu__isi {
+  min-width: 0;
+}
+
+.kartu__judul,
+p {
+  overflow-wrap: anywhere;
+}

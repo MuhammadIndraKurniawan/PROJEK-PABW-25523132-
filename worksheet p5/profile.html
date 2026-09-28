@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="komponen.css">
   <link rel="stylesheet" href="tema.css">
 </head>
+  <body>
+    <!-- Wadah utama grid layout -->
+    <div class="page">
+      <header>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">🌙 Ganti Tema</label>
 
-<!-- 2. Tambahkan tombol pengalih tema & pembungkus flex di <header>: -->
-<header>
-  <input type="checkbox" id="tema" class="pengalih-tema">
-  <label for="tema" class="tombol-tema">🌙 Ganti Tema</label>
   <div class="header-baris">
     <h1>Jadwal dan target olahraga saya</h1>
-    <nav aria-label="Navigasi utama">
+    <nav aria-label="Navigasi utama" class="navbar">
       <ul>
         <li><a href="#jadwal">Jadwal Latihan</a></li>
         <li><a href="#catat">Catat Latihan</a></li>
