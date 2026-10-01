@@ -1,0 +1,58 @@
+/* ==========================================================================
+   LAPIS 1: TOKEN PRIMITIF (Nilai mentah / palet warna & skala dasar)
+   ========================================================================== */
+:root {
+  /* Skala Warna Terracotta & Clay Slate */
+  --terracotta-100: #FDEEE9;
+  --terracotta-200: #FACCC0;
+  --terracotta-400: #E66A3B;
+  --terracotta-600: #B84318;
+  --terracotta-800: #7A280B;
+
+  /* Skala Netral Warm Clay */
+  --clay-50:  #FAF7F5;
+  --clay-100: #F2ECE9;
+  --clay-200: #D8CBC4;
+  --clay-700: #423732;
+  --clay-800: #231D1A;
+  --clay-900: #171311;
+
+  /* Aksen & Validasi */
+  --amber-clay:  #C85A17;
+  --crimson-700: #BA1A1A;
+  --white:       #FFFFFF;
+
+  /* Skala Jarak (Spasi) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  /* Sudut Kelengkungan & Bayangan */
+  --radius-md:   0.5rem;
+  --radius-full: 999px;
+  --shadow-1:    0 2px 4px rgba(35, 26, 22, 0.08);
+
+  /* Skala Tipografi Relatif */
+  --text-sm:  0.875rem;
+  --text-md:  1rem;
+  --text-xl:  1.5rem;
+  --text-3xl: 2.25rem;
+}
+
+/* ==========================================================================
+   LAPIS 2: TOKEN SEMANTIK (Peran fungsional yang dikonsumsi komponen)
+   ========================================================================== */
+:root {
+  --color-bg:       var(--clay-50);
+  --color-fg:       var(--clay-900);
+  --color-surface:  var(--white);
+  --color-border:   var(--clay-200);
+  --color-primary:  var(--terracotta-600);
+  --color-danger:   var(--crimson-700);
+  --color-focus:    var(--amber-clay);
+
+  --card-pad:    var(--space-4);
+  --section-gap: var(--space-6);
+}

@@ -1,0 +1,56 @@
+/* Reset esensial & box-sizing global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  padding: var(--space-4);
+}
+
+/* Tipografi Berjenjang */
+h1 {
+  font-size: var(--text-3xl);
+  line-height: 1.2;
+  color: var(--color-fg);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  line-height: 1.3;
+  color: var(--color-fg);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--space-1);
+}
+
+/* Pembatasan panjang baris ideal keterbacaan (45-75ch) */
+main p {
+  max-width: 65ch;
+}
+
+/* Penanganan Gambar Responsif */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keadaan Aksesibilitas Fokus Papan Ketik */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
