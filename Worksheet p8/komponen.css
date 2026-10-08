@@ -1,0 +1,161 @@
+/* Tabel Jadwal Olahraga */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+caption {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: var(--space-2);
+  color: var(--color-fg);
+}
+
+th, td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+thead th {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+/* Gambar Profil / Ilustrasi */
+figure {
+  margin: 0;
+  max-width: 32rem;
+}
+
+figure img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
+/* Komponen Form Interaktif */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 28rem;
+  background-color: var(--color-surface);
+  padding: var(--card-pad);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input, select, textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-fg);
+  transition: border-color 0.2s ease;
+}
+
+/* Tombol Aksi */
+button {
+  font: inherit;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--white);
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: var(--shadow-1);
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+/* Validasi Interaktif :user-invalid & Pesan Galat */
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* Munculkan pesan galat hanya saat kolom berstatus user-invalid */
+.form-kolom:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+/* ===================================================
+   LEMBAR C: Galeri Adaptif & Isi Kartu
+   =================================================== */
+
+/* C.1 Galeri adaptif tanpa media query */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4, 1rem);
+}
+
+/* C.2 Isi kartu memakai flex dan tinggi seragam */
+.kartu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 14rem;
+  min-width: 0;
+}
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2, 0.5rem);
+}
+
+/* ===================================================
+   LEMBAR D: Penempatan Span untuk Sorotan
+   =================================================== */
+.sorotan {
+  grid-column: span 2;
+}
+
+/* ===================================================
+   LEMBAR E: Mencegah Teks Panjang Meluber
+   =================================================== */
+.kartu__isi {
+  min-width: 0;
+}
+
+.kartu__judul,
+p {
+  overflow-wrap: anywhere;
+}

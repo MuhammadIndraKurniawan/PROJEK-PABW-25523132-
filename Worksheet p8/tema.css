@@ -1,0 +1,57 @@
+/* Tombol Pengalih Tema Manual (Checkbox Hack) */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tombol-tema {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 1. Tema Gelap Otomatis (Mengikuti Sistem Operasi) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:       #171311;
+    --color-fg:       #F3EFEA;
+    --color-surface:  #231D1A;
+    --color-border:   #423732;
+    --color-primary:  #FF9E79; /* Terracotta terang agar kontras >= 4.5:1 */
+    --color-danger:   #FF897D;
+    --color-focus:    #FFB74D;
+    --shadow-1:       0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  button {
+    color: #171311; /* Teks tombol gelap agar kontras terhadap --color-primary terang */
+  }
+
+  thead th {
+    color: #171311;
+  }
+}
+
+/* 2. Tema Gelap Manual (Ditulis SETELAH media query agar menang prioritas) */
+:root:has(#tema:checked) {
+  --color-bg:       #171311;
+  --color-fg:       #F3EFEA;
+  --color-surface:  #231D1A;
+  --color-border:   #423732;
+  --color-primary:  #FF9E79;
+  --color-danger:   #FF897D;
+  --color-focus:    #FFB74D;
+  --shadow-1:       0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+:root:has(#tema:checked) button,
+:root:has(#tema:checked) thead th {
+  color: #171311;
+}

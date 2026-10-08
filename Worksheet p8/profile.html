@@ -1,0 +1,49 @@
+<!-- 1. Pastikan urutan pemuatan CSS di dalam <head> benar: -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal dan target olahraga saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+  <body>
+    <!-- Wadah utama grid layout -->
+    <div class="page">
+      <header>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">🌙 Ganti Tema</label>
+
+  <div class="header-baris">
+    <h1>Jadwal dan target olahraga saya</h1>
+    <nav aria-label="Navigasi utama" class="navbar">
+      <ul>
+        <li><a href="#jadwal">Jadwal Latihan</a></li>
+        <li><a href="#catat">Catat Latihan</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 3. Pada form pencatatan, berikan class="form-kolom" pada elemen <p> dan sertakan span pesan galat: -->
+<form action="/simpan" method="post">
+  <p class="form-kolom">
+    <label for="jenis">Jenis:</label>
+    <input type="text" id="jenis" name="jenis" required>
+    <span class="pesan-galat">Harap isi jenis olahraga Anda.</span>
+  </p>
+  <p class="form-kolom">
+    <label for="tanggal">Tanggal:</label>
+    <input type="date" id="tanggal" name="tanggal" required>
+    <span class="pesan-galat">Harap pilih tanggal latihan yang valid.</span>
+  </p>
+  <p class="form-kolom">
+    <label for="durasi">Durasi (Menit):</label>
+    <input type="number" id="durasi" name="durasi" min="1" required>
+    <span class="pesan-galat">Durasi minimal adalah 1 menit.</span>
+  </p>
+  <button type="submit">Simpan</button>
+</form>
